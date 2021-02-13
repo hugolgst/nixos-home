@@ -23,6 +23,7 @@
     ## Languages
     python
     nodejs
+    rustup
   ];
 
   nixpkgs.config.allowUnfree = true;
