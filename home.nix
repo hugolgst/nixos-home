@@ -5,13 +5,24 @@
 
   home.packages = with pkgs; [
     neofetch
-    nixfmt
     google-chrome
-    tmux
 
     # Fonts
     jetbrains-mono
     roboto
+
+    # Programming packages
+    tmux
+    gitAndTools.gh
+    gnupg
+    pinentry
+    ## Nix related
+    nixfmt
+    nix-linter
+    nixpkgs-review
+    ## Languages
+    python
+    nodejs
   ];
 
   nixpkgs.config.allowUnfree = true;
