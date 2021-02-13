@@ -82,16 +82,8 @@
       height = 30;
       modules-left = [ "sway/workspaces" "tray" "custom/performancemode" ];
       modules-center = [ ];
-      modules-right = [
-        "network"
-        "cpu"
-        "memory"
-        "disk"
-        "battery"
-        "battery#bat2"
-        "pulseaudio"
-        "clock"
-      ];
+      modules-right =
+        [ "network" "cpu" "memory" "disk" "battery" "pulseaudio" "clock" ];
       modules = {
         "sway/workspaces" = {
           all-outputs = false;
@@ -114,7 +106,7 @@
         };
 
         battery = {
-          bat = "BAT2";
+          bat = "BAT0";
           interval = 30;
           states = {
             warning = 30;
@@ -123,19 +115,6 @@
           format = " {capacity}%";
           format-charging = " {capacity}% ";
           format-plugged = " {capacity}% ";
-          tooltip = true;
-        };
-
-        "battery#bat2" = {
-          bat = "BAT1";
-          interval = 30;
-          states = {
-            warning = 30;
-            critical = 15;
-          };
-          format = " {capacity}%";
-          format-charging = " {capacity}% ";
-          format-plugged = " {capacity}% ";
           tooltip = true;
         };
 
